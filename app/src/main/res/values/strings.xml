@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pizzas</string>
+    <string name="btnCreate">Crear Pizza</string>
+    <string name="btnList">Listado Pizzas</string>
+    <string name="btnSave">Guardar</string>
+    <string name="hintName">Nombre de Pizza</string>
+    <string name="rbtnMeat">Carne</string>
+    <string name="rbtnChicken">Pollo</string>
+    <string name="rbtnBoth">Ambos</string>
+    <string name="rbtnRed">Roja</string>
+    <string name="rbtnWhite">Blanca</string>
+    <string name="cboxOnion">Cebolla</string>
+    <string name="cboxMushroom">Champiñon</string>
+    <string name="cboxBellPeeper">Morron</string>
+    <string name="cboxTomato">Tomate</string>
+    <string name="cboxCherryTomato">Tomate Cherry</string>
+    <string name="cboxAvocado">Palta</string>
+    <string name="cboxGarlic">Ajo</string>
+    <string name="cboxBasil">Albahaca</string>
+    <string name="cboxOregano">Orégano</string>
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePizzaActivity">
+
+    <EditText
+        android:id="@+id/etxtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="@string/hintName"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <RadioGroup
+        android:id="@+id/rgPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtName">
+
+        <RadioButton
+            android:id="@+id/rbtnMeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rbtnMeat" />
+
+        <RadioButton
+            android:id="@+id/rbtnChicken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtnChicken" />
+
+        <RadioButton
+            android:id="@+id/rbtnBoth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtnBoth" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgPrincipal" >
+
+        <RadioButton
+            android:id="@+id/rbtnRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rbtnRed" />
+
+        <RadioButton
+            android:id="@+id/rbtnWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtnWhite" />
+    </RadioGroup>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgBase">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/cboxOnion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cboxOnion" />
+
+            <CheckBox
+                android:id="@+id/cboxMushroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cboxMushroom" />
+
+            <CheckBox
+                android:id="@+id/cboxBellPeeper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cboxBellPeeper" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/cboxTomato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cboxTomato" />
+
+            <CheckBox
+                android:id="@+id/cboxCherryTomato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cboxCherryTomato" />
+
+            <CheckBox
+                android:id="@+id/cboxAvocado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cboxAvocado" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" >
+
+        <CheckBox
+            android:id="@+id/cboxGarlic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cboxGarlic" />
+
+        <CheckBox
+            android:id="@+id/cboxBasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cboxBasil" />
+
+        <CheckBox
+            android:id="@+id/cboxOregano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cboxOregano" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

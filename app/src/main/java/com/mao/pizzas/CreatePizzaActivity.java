@@ -31,7 +31,7 @@ public class CreatePizzaActivity extends AppCompatActivity {
       cboxOregano;
 
   // Otras
-  Double cost = 0.0;
+  Integer cost = 0;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +56,13 @@ public class CreatePizzaActivity extends AppCompatActivity {
   }
 
   public void savePizza(View view) {
-    cost = 0.0;
+    cost = 0;
+
     String name = getName();
+    if (name.equals("")) {
+      Toast.makeText(this, "Ingresa un nombre a la pizza.", Toast.LENGTH_LONG).show();
+      return;
+    }
     String principal = getPrincipal();
     String base = getBase();
     String[] ingredients = getIngredients();
@@ -72,26 +77,17 @@ public class CreatePizzaActivity extends AppCompatActivity {
     finish();
   }
 
-  public String getName() {
-    return name.getText().toString();
-  }
+  public String getName() { return name.getText().toString(); }
 
   public String getPrincipal() {
     int idPrincipal = principal.getCheckedRadioButtonId();
     RadioButton rbtn = findViewById(idPrincipal);
     String principal = rbtn.getText().toString();
 
-    switch (principal) {
-      case "Carne":
-      case "Meat":
-      case "Pollo":
-      case "Chicken":
-        cost += 1500;
-        break;
-      case "Ambos":
-      case "Both":
-        cost += 2000;
-        break;
+    if (principal.equals("Carne") || principal.equals("Pollo")) {
+      cost += 1500;
+    } else {
+      cost += 2000;
     }
 
     return principal;

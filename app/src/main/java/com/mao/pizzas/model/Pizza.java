@@ -3,7 +3,7 @@ package com.mao.pizzas.model;
 public class Pizza {
   String name, principal, base;
   String[] ingredients, condiments;
-  Double cost;
+  Integer cost;
 
   public Pizza(
       String name,
@@ -11,7 +11,7 @@ public class Pizza {
       String base,
       String[] ingredients,
       String[] condiments,
-      Double cost) {
+      Integer cost) {
     this.name = name;
     this.principal = principal;
     this.base = base;
@@ -49,9 +49,9 @@ public class Pizza {
       String text = "";
       for (int i = 0; i < (ingredients.length); i++) {
         if (i < (ingredients.length - 1)) {
-          text += ingredients[i] + ", ";
+          text += "- " + ingredients[i] + "\n";
         } else {
-          text += ingredients[i] + ".";
+          text += "- " + ingredients[i];
         }
       }
       return text;
@@ -69,9 +69,9 @@ public class Pizza {
       String text = "";
       for (int i = 0; i < (condiments.length); i++) {
         if (i < (condiments.length - 1)) {
-          text += condiments[i] + ", ";
+          text += "- " + condiments[i] + "\n";
         } else {
-          text += condiments[i] + ".";
+          text += "- " + condiments[i];
         }
       }
       return text;
@@ -84,11 +84,11 @@ public class Pizza {
     this.condiments = condiments;
   }
 
-  public Double getCost() {
+  public Integer getCost() {
     return cost;
   }
 
-  public void setCost(Double cost) {
+  public void setCost(Integer cost) {
     this.cost = cost;
   }
 }

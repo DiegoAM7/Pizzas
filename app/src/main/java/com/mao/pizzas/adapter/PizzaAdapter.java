@@ -1,21 +1,18 @@
 package com.mao.pizzas.adapter;
 
-import android.content.Context;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mao.pizzas.R;
 import com.mao.pizzas.model.Pizza;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> {
   ArrayList<Pizza> pizzaArrayList;
@@ -27,6 +24,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> 
 
   public static class ViewHolder extends RecyclerView.ViewHolder {
     TextView txtName, txtPrincipal, txtBase, txtIngredients, txtCondiments, txtCost;
+    ImageView imgPizza;
 
     public ViewHolder(@NonNull View itemView) {
       super(itemView);
@@ -36,6 +34,7 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> 
       txtIngredients = itemView.findViewById(R.id.txtIngredients);
       txtCondiments = itemView.findViewById(R.id.txtCondiments);
       txtCost = itemView.findViewById(R.id.txtCost);
+      imgPizza = itemView.findViewById(R.id.imgPizza);
     }
 
     public void chargeData(Pizza pizza) {
@@ -44,7 +43,8 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> 
       txtBase.setText(pizza.getBase());
       txtIngredients.setText(pizza.getIngredients());
       txtCondiments.setText(pizza.getCondiments());
-      txtCost.setText(String.valueOf(pizza.getCost()));
+      txtCost.setText("$ " + pizza.getCost());
+      imgPizza.setImageResource(R.drawable.pizza_list);
     }
   }
 

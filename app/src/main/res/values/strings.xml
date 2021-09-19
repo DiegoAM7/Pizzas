@@ -7,7 +7,7 @@
     <string name="hintName">Nombre de Pizza</string>
     <string name="rbtnMeat">Carne</string>
     <string name="rbtnChicken">Pollo</string>
-    <string name="rbtnBoth">Ambos</string>
+    <string name="rbtnBoth">Ambas</string>
     <string name="rbtnRed">Roja</string>
     <string name="rbtnWhite">Blanca</string>
     <string name="cboxOnion">Cebolla</string>
@@ -19,4 +19,15 @@
     <string name="cboxGarlic">Ajo</string>
     <string name="cboxBasil">Albahaca</string>
     <string name="cboxOregano">Orégano</string>
+
+    <string name="test">A</string>
+    <string name="ingPrincipal">Ingrediente Principal</string>
+    <string name="ingOther">Otros Ingredientes</string>
+    <string name="ingredient">Ingredientes</string>
+    <string name="base">Base</string>
+    <string name="principal">Principal</string>
+    <string name="ingredients">Otros</string>
+    <string name="condiments">Aliños</string>
+
+
 </resources>
